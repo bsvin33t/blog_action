@@ -10,7 +10,7 @@ jobs:
         with:
           repository: bsvin33t/bsvin33t
       - name: Set up Ruby
-      - uses: ruby/setup-ruby@v1
+        uses: ruby/setup-ruby@v1
         with:
           ruby-version: 2.6
       - name: Install dependencies
