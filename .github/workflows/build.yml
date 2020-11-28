@@ -14,13 +14,13 @@ jobs:
         with:
           ruby-version: 2.6
       - name: Install dependencies
-        run: bundle install
+      - run: bundle install
       - name: Build blog posts
-        run: bundle exec rake
+      - run: bundle exec rake
       - name: Create static files
-        run: bundle exec jekyll build
+      - run: bundle exec jekyll build
       - name: Push the static files to the blogging repository
-        run: |
+      - run: |
           cd _site; git init; \
           git remote add origin \
           https://${{secrets.USERNAME}}:${{secrets.TOKEN}}@github.com/bsvin33t/bsvin33t.github.com.git; \
